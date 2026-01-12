@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>for adik 🤍</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  font-family:'Georgia', serif;
+  background:linear-gradient(135deg,#1f1c2c,#928dab);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+}
+.card{
+  background:rgba(255,255,255,0.14);
+  backdrop-filter:blur(14px);
+  padding:32px;
+  border-radius:24px;
+  max-width:420px;
+  text-align:center;
+  box-shadow:0 25px 60px rgba(0,0,0,0.35);
+  animation:fade 1.2s ease;
+}
+p{
+  line-height:1.8;
+  font-size:15px;
+  white-space:pre-line;
+}
+button{
+  margin-top:22px;
+  padding:10px 26px;
+  border:none;
+  border-radius:22px;
+  background:#fff;
+  color:#1f1c2c;
+  font-size:14px;
+}
+@keyframes fade{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="s1">
+  <p>halo, adik 🤍</p>
+  <p>aku bikinin sesuatu kecil buat kamu.</p>
+  <button onclick="next(2)">lanjut</button>
+</div>
+
+<div class="card" id="s2" style="display:none">
+  <p>tolong bukanya pelan-pelan ya.</p>
+  <p>ini tentang kamu.</p>
+  <button onclick="next(3)">lanjut</button>
+</div>
+
+<div class="card" id="s3" style="display:none">
+  <p>
+selamat ulang tahun ya, adik.
+hari ini aku cuma pengen kamu ngerasa dicintai,
+bukan cuma karena hari ini spesial,
+tapi karena kamu memang sepantas itu.
+
+semoga di usia kamu yang baru,
+dunia lebih lembut sama kamu,
+dan kamu selalu dikelilingi hal-hal baik.
+
+aku bangga sama kamu,
+dengan semua proses dan versi diri kamu.
+terima kasih sudah hadir di hidup aku.
+  </p>
+  <p style="margin-top:18px;font-style:italic;">with love, bubu</p>
+
+  <audio controls autoplay loop style="width:100%;margin-top:16px">
+    <source src="https://cdn.pixabay.com/audio/2022/11/03/audio_7c7c7a4a9c.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<script>
+function next(n){
+  document.getElementById('s1').style.display='none';
+  document.getElementById('s2').style.display='none';
+  document.getElementById('s3').style.display='none';
+  document.getElementById('s'+n).style.display='block';
+}
+</script>
+
+</body>
+</html>
